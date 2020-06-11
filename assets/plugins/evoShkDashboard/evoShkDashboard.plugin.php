@@ -134,7 +134,7 @@ if ($modx->event->name=='OnManagerWelcomeHome')
 	
 	
 	document.addEventListener('DOMContentLoaded', function(){
-		
+		$('#pagination li').eq(0).children().attr({'href':'javascript:parent.location.reload();'});
 		$('.trash-item').click(function(){						
 			var oid = $(this).data('id');
 			if(confirm('Вы уверены?'))
